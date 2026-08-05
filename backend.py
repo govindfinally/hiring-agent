@@ -29,6 +29,7 @@ logging.basicConfig(
 
 APP_ROOT = Path(__file__).resolve().parent
 RATE_LIMIT_DB = APP_ROOT / "rate_limits.sqlite3"
+
 FREE_TIER_DAILY_LIMIT = int(os.getenv("FREE_TIER_DAILY_LIMIT", "3"))
 RATE_LIMIT_WINDOW = f"{FREE_TIER_DAILY_LIMIT}/day"
 

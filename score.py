@@ -358,7 +358,24 @@ def main(pdf_path, role: Role):
 
             # Write the row
             writer.writerow(csv_row)
-
+        with open("D:\hackerrank Ai hiring agent\hiring-agent\maintainance_result.txt","w") as f:
+            f.write(f"Overall Score: {score}\n")
+            f.write("Detailed Scores:\n")
+            if score.scores:
+                if score.scores.open_source:
+                    f.write(f"Open Source: {min(score.scores.open_source.score, 35)}/{score.scores.open_source.max}\n")
+                if score.scores.self_projects:
+                    f.write(f"Self Projects: {min(score.scores.self_projects.score, 30)}/{score.scores.self_projects.max}\n")
+                if score.scores.production:
+                    f.write(f"Production Experience: {min(score.scores.production.score, 25)}/{score.scores.production.max}\n")
+                if score.scores.technical_skills:
+                    f.write(f"Technical Skills: {min(score.scores.technical_skills.score, 10)}/{score.scores.technical_skills.max}\n")
+            if score.bonus_points:
+                f.write(f"Bonus Points: {score.bonus_points.total}\n")
+            if score.deductions and score.deductions.total > 0:
+                f.write(f"Deductions: -{score.deductions.total}\n")  
+            f.write("total scoreobtianed: "+str(score)+"\n")   
+                f.write(f"Deductions: -{score.deductions.total}\n")     
     return score
 
 

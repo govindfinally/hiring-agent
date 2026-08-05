@@ -159,7 +159,11 @@ $ pip install -r requirements.txt
 Pull the model you want to use. For example:
 
 ```bash
+<<<<<<< HEAD
 $ ollama pull gemma4:latest
+=======
+$ ollama pull gemma3:4b
+>>>>>>> render/main
 ```
 
 If you want different results, you can pull other models such as:
@@ -255,7 +259,11 @@ Provide a path to a resume PDF and the role to score against. `--role` is the
 name of a directory under `roles/` and is **required**.
 
 ```bash
+<<<<<<< HEAD
 $ python score.py ./resume/sample.pdf --role software_engineering_intern
+=======
+$ python score.py /path/to/resume.pdf
+>>>>>>> render/main
 ```
 
 What happens:
