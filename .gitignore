@@ -8,6 +8,22 @@ cache/
 resume_evaluations.csv
 greenhouse_resumes/*
 
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local runtime artifacts
+uploads/
+temp/
+*.tmp
+*.log
+
+# Editor and OS noise
+.vscode/
+.DS_Store
+Thumbs.db
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
