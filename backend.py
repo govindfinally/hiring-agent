@@ -46,7 +46,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-limiter = Limiter(key_func=get_remote_address, storage_uri=f"sqlite:///{RATE_LIMIT_DB}")
+limiter = Limiter(key_func=get_remote_address, default_limits=[])
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 

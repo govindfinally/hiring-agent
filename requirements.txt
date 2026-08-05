@@ -10,4 +10,4 @@ black==25.9.0
 fastapi==0.115.6
 uvicorn==0.34.3
 python-multipart==0.0.9
-slowapi==0.8.2
+slowapi==0.1.10
